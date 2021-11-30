@@ -1,5 +1,5 @@
 import { Todo } from './classes';
-import { todoList } from './index.js'
+import { todoList } from '../index.js'
 
 
 // Referencias en el HTML
