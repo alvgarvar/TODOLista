@@ -7,7 +7,7 @@ const divTodoList = document.querySelector('.todo-list');
 const txtInput = document.querySelector('.new-todo');
 const btnBorrar = document.querySelector('.clear-completed');
 const ulFiltros = document.querySelector('.filters');
-const anchorFiltros = docuemnt.querySelectorAll('.filtro');
+const anchorFiltros = document.querySelectorAll('.filtro');
 
 export const crearTodoHtml = (todo) => {
     
@@ -50,10 +50,10 @@ divTodoList.addEventListener('click', ( event ) => {
 
     const todoId = todoElemento.getAttribute('data-id');
 
-    if ( nombreElemento.include('input') ) {
+    if ( nombreElemento.includes('input') ) {
         todoList.marcarCompletado( todoId );
         todoElemento.classList.toggle('completed');
-    } else if ( nombreElemento.include('button') ) {
+    } else if ( nombreElemento.includes('button') ) {
         todoList.eliminarTodo( todoId );
         divTodoList.removeChild( todoElemento );
     }
